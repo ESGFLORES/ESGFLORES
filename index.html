@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lector de texto inteligente</title>
+   
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+    background:#fa4299;
+    }
+    header{
+        width: 100%;
+        overflow: hidden;
+        background: #252932;
+        margin-bottom: 20px;
+    }
+    .wrapper{
+        width: 90%;
+        max-width: 1000px;
+        margin: auto;
+        overflow: hidden;
+    }
+    .nombre{
+        color: #f2f2f2;
+        font-size: 50px;
+        line-height: 200px;
+        float: left;
+    }
+    header nav{
+        float: right;
+        line-height: 200px;
+
+    }
+    header nav a{
+        display: inline-block;
+        color:aliceblue;
+        text-decoration: none;
+        padding: 10px 20px;
+        line-height: normal;
+        font-size: 20px;
+        font-weight: bold;
+        -webkit-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+    }
+    header nav a:hover{
+        background: #f56f3a ;
+        border-radius: 50px;
+    }
+    .header2{
+        position: fixed;
+        height: 100px;
+    }
+    .header2 .nombre{
+        line-height: 100px;
+        font-size: 50px;
+    }
+    .header2 nav{
+        line-height: 100px;
+    }
+    @media screen and (max-width: 950px){
+        header .nombre,
+        header nav{
+            width: 100%;
+            text-align: center;
+            line-height:100px;
+        }
+        .header2{
+           height: auto; 
+        }
+        .header2 .nombre,
+        .header2 nav{
+            line-height: 50px;
+        }
+    }
+    .contenido{
+        padding-top: 100px;
+    }
+    .contenido h3{
+        color: #0c0c0c;
+        font-weight: bold;
+    }
+    .contenido h2{
+        background-color: rgb(100, 100, 164);
+        color: #0c0c0c;
+        font-weight: bold;
+        text-align: center;
+    }
+</style>
+
+</head>
+<body>
+
+    <header class="header2">
+        
+        <div class="wrapper">
+            <div class="nombre">LectorInteligente</div>
+
+          <nav>
+                <a href="login.html">Iniciar Sesión</a>
+                <a href="ayuda.html">Ayuda</a>
+         </nav>
+        </div>
+    </header>
+      <section class="contenido wrapper ">
+        <h2>Acerca de nuestro lector de texto inteligente:</h2>
+        <h3>Nuestro lector...</h3>
+       
+    </section>
+</body>
+</html>
