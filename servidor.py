@@ -5,7 +5,7 @@ from string import Template
 import pyodbc
 
 
-port = 3010
+port = 3008
 
 class miServidor(SimpleHTTPRequestHandler):
     def do_GET(self):
