@@ -42,7 +42,7 @@
     <nav class="navbar bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="icom.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            <img class="d-inline-block align-text-top" src="{{ url_for('static', filename='img/icom.png') }}" alt="Logo" width="30" height="24">
             Bienvenido a nuestro lector
           </a>
         </div>
@@ -52,9 +52,9 @@
 </body>
 <body>
 <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4">Le damos la bienvenida a nuestra herramienta de vision inteligente en la cual con solo mostrar una imagen con texto a la camara del lector este la leera por ti y podras escuchar lo que dice en el siguiente reproductor que esta justo debajo,  tienes una opcion de "Regresar" que te envia a la pagina principal</p>
+    <p class="lead mb-4">Le damos la bienvenida a nuestra herramienta de visión inteligente en la cual con solo mostrar una imagen con texto a la cámara del lector, éste la leerá por ti y podrás escuchar lo que dice en el siguiente reproductor que esta justo debajo; también, tienes la opción de "Cerrar Sesión" que te envía a la página de login si es que deseas entrar con otro usuario.</p>
     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-      <a href="index.html" class="btn btn-outline-secondary btn-lg px-4">Regresar</a>
+        <a class="btn btn-secondary" href="{{ url_for('logout') }}">Cerrar Sesión</a>
     </div>
   </div>
 </div>
@@ -72,7 +72,7 @@
 <head>
     <body>
         <div class="camera">
-        <script src="main.js"></script>
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
         <video src="" id="video" autoplay="true"></video>
     </div>
     </body>
@@ -98,3 +98,4 @@
 
 </body>
 </html>
+    
