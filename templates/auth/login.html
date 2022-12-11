@@ -1,54 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <!-- iconos font-awesome -->
-    <script src="https://kit.fontawesome.com/9d0ecd6d4d.js" crossorigin="anonymous"></script>
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
-</head>
-<body>
-    
-    <div class="container">
-        <h1>Acceso</h1>
-        <form action="">
-            <div class="form__group form__div">
-                <span><i class="fa-solid fa-envelope"></i></span>
-                <input class="campo" type="email" placeholder="Direccion de correo electronico">
-            </div>
-            <div class="form__group form__div">
-                <span><i class="fa-solid fa-lock"></i></span>
-                <input class="campo" type="password" placeholder="Contraseña">
-            </div>
-            <div class="form__group">
-                <button type="submit">Acceso</button>
-            </div>
-            <div class="form__group__enlace">
-                <a class="enlace" href="#">¿Olvidaste tu contraseña?</a>
-            </div>
-        </form>
-        <hr>
-        <div class="div__group">
-            <a class="registro" href="{{ url_for('agregar') }}">registro</a>
-        </div>
-        <!--
-                <p>Inicie sesión con su cuenta de redes sociales</p>
-        
-        <div class="div__group">
-            <a class="redes" href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a class="redes" href="#"><i class="fa-brands fa-facebook"></i></a>
-            
-        </div>
-        -->      
-        
-        
+
+<h1 class="mb-5" id="title">Ingresar<hr> </h1>
+<form action="{{ url_for('loger') }}" method="POST" autocomplete="off">
+    <div class="mb-6">
+        <label for="email" class="form-label">Escribir tu Email</label>
+        <input type="email" name="email" id="email" class="form-control" required="true">
+    </div>
+    <div class="mb-6">
+        <label for="password" class="form-label mt-4">Escribe tu Contraseña</label>
+        <input type="password" name="password" class="form-control" required="true">
     </div>
 
-</body>
-</html>
+    <div class="d-grid gap-2 mt-3 mb-3">
+        <button type="submit" class="btn btn-primary btn-send">Ingresar</button>
+    </div>
+
+    <div class="mb-12">
+        <span>
+            No tienes Cuenta?
+        </span>
+        <a href="#" id="link_sign_up" class="createUser">
+            Crear cuenta
+        </a>
+    </div>
+</form>
